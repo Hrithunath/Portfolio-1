@@ -305,6 +305,21 @@
 		stickyFunction();
 		owlCrouselFeatureSlide();
 	});
+
+	function ValidateEmail() {
+		var inputText = document.getElementById("email").value;
+		var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+		if( inputText.match(mailformat)) {
+			return true;
+		} else {
+
+			alert("you have entered in invalid email address!");
+			document.getElementById("email").focus();
+			return false;
+		}
+
+
+	}
 	
 
 
